@@ -5,9 +5,9 @@ def sync_org_to_git():
    ORG_ALIAS = "TestOrg"   # 🔹 your Salesforce org alias
    BRANCH = "Dev-Branch"           # 🔹 your GitHub branch
    try:
-       # Step 1: Retrieve metadata from Salesforce org
+       # Step 1: Retrieve all metadata from Salesforce org using manifest
        subprocess.run(
-           f"sf project retrieve start --target-org {ORG_ALIAS} -d force-app",
+           f"sf project retrieve start --target-org {ORG_ALIAS} --manifest manifest/package.xml",
            shell=True, check=True, cwd=project_folder
        )
        # Step 2: Stage changes
@@ -19,8 +19,10 @@ def sync_org_to_git():
            subprocess.run(f'git commit -m "{commit_msg}"', shell=True, check=True, cwd=project_folder)
            subprocess.run(f"git push origin {BRANCH}", shell=True, check=True, cwd=project_folder)
            print(f"✅ Org '{ORG_ALIAS}' successfully synced with GitHub branch '{BRANCH}'!")
+           return f"✅ Org '{ORG_ALIAS}' successfully synced with GitHub branch '{BRANCH}'!"
        else:
            print("⚡ No changes to commit.")
+           return "⚡ No changes to commit."
    except subprocess.CalledProcessError as e:
        print(f"❌ Error: {e}")
 
