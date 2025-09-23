@@ -6,7 +6,7 @@ import datetime
 def sync_org_to_git():
     # Navigate to Salesforce project root (2 levels up from scripts/python/)
     project_folder = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    ORG_ALIAS = "TestOrg"    # 🔹 your Salesforce org alias
+    ORG_ALIAS = "sameerorg"    # 🔹 your Salesforce org alias
     BRANCH = "Dev-Branch"    # 🔹 your GitHub branch
     BASE_BRANCH = "master"     # 🔹 target branch for PR (adjust if different)
 

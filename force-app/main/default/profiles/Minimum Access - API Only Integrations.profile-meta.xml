@@ -2821,6 +2821,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>Project__c.Topic__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Seller.ActiveFromDate</field>
         <readable>false</readable>
     </fieldPermissions>
