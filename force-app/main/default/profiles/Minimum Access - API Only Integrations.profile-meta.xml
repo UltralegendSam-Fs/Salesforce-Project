@@ -124,6 +124,10 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>BookTriggerHandler</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>ProjectTriggerHandler</apexClass>
         <enabled>false</enabled>
     </classAccesses>
@@ -675,6 +679,16 @@
     <fieldPermissions>
         <editable>false</editable>
         <field>AuthorizationFormText.SummaryAuthFormText</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Book__c.Author__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Book__c.Published_Date__c</field>
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
@@ -3453,6 +3467,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>AuthorizationFormText-Authorization Form Text Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>Book__c-Book Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>CaseMilestone-Case Milestone Layout</layout>
