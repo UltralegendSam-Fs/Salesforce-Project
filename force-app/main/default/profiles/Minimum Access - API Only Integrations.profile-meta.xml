@@ -2366,6 +2366,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>false</editable>
+        <field>License__c.License_Holder__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
         <field>Location.CloseDate</field>
         <readable>false</readable>
     </fieldPermissions>
@@ -3060,6 +3065,11 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>Task__c.Assigned_To__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>WorkOrder.AccountId</field>
         <readable>true</readable>
@@ -3518,6 +3528,9 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>GuestUserAnomalyEventStore-Guest User Anomaly Event Store Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>License__c-License Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>LoginAnomalyEventStore-Login Anomaly Event Store Layout</layout>
